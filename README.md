@@ -39,11 +39,9 @@ Built with:
   - Smooth real-time UX with timestamps and auto-scroll.
 
 - **Testing**
-  - Full unit test coverage:
+  - Unit test coverage:
     - Joi form validations
-    - OpenAI service prompt generation
     - Multi-turn chat flow
-    - Timing metrics and scoring algorithm
 
 ---
 
