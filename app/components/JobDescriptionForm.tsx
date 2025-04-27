@@ -46,9 +46,14 @@ export default function JobDescriptionForm() {
       localStorage.setItem('candidateCV', candidateCV.trim());
 
       router.push('/interview');
-    } catch (err: any) {
-      console.error('Error reading CV file:', err);
-      setError(err.message || 'Error reading CV file.');
+    } catch (err) {
+      if (err instanceof Error) {
+        console.error('Error reading CV file:', err.message);
+        setError(err.message || 'Error reading CV file.');
+      } else {
+        console.error('Unknown error reading CV file:', err);
+        setError('Error reading CV file.');
+      }
     }
   };
 
